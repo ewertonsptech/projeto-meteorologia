@@ -136,3 +136,105 @@
 h1{
     color:#FFFFFF;
 }
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background: #FFFFFF;
+}
+
+
+form label {
+    margin-top: 10px;
+}
+
+form input {
+    margin-top: 8px;
+    outline:0;
+    border: 0;
+    border-bottom: 1px solid #3498DB;
+    padding: 7px;
+    border-radius:0px;
+    background-color: #e5e5e58c;
+}
+
+input:focus, textarea:focus {
+    border-color: #3498DB !important;
+}
+
+input:invalid, textarea:invalid {
+    border-color: red;
+}
+
+input:valid, textarea:valid {
+    border-color: green;
+}
+
+.card-login form input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline:0;
+    border: 0;
+    border-bottom: 1px solid #3498DB;
+    padding: 8px;
+    border-radius:0px;
+}
+
+form input:hover{
+    border-bottom: 1px solid black;
+    transition: 0.5s;
+}
+
+form button {
+    margin-bottom: 10px;
+    margin-top: 15px;
+    background-color: #3498DB;
+    color: white;
+    height: 35px;
+    width: 100%;
+    align-self: center;
+    font-size: 18px;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: 0 4px 40px 0 rgb(0, 0, 0, 0.2);
+}
+
+form button:hover{
+    background-color: black;
+    color:white;
+    transition: 1s;
+}
+
+h3 {
+    color: #3498DB;
+}
+
+.card-cadastro form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+}
+
+.card-cadastro{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #bdbabae5;
+    border-radius: 5px;
+   background-color: #FFFFFF;
+    height: 430px;
+    margin-top: 5%;
+    width: 70%;
+    align-items: center;
+    box-shadow: 0 4px 80px 0 rgb(0, 0, 0, 0.2);
+    z-index: 5;
+}
+span{
+    color: #38B0DE;
+}
+.cadastro{
+    color: #38B0DE;
+}
