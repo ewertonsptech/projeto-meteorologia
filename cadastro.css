@@ -12,6 +12,7 @@
 .navbar{
     width: 100%;
     box-shadow: 0 1px 4px rgb(146 161 176/15%);
+    position: fixed;
 }
 .nav-container{
     display: flex;
@@ -121,8 +122,14 @@
     display: none;
 }
 .banner{
-    background-image: url(leite.png);
+    background: url(EISSO.png);
+  
     background-size: cover;
+    display: table;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 0;
+  color: white;
     }
     
 .banner .container {
