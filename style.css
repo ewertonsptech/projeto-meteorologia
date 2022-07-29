@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .container{
     max-width: 1050px;
     width: 90%;
@@ -120,7 +121,7 @@
     display: none;
 }
 .banner{
-    background-image: url(https://thumbs.dreamstime.com/z/neve-borrada-de-new-york-city-do-times-square-inverno-135169033.jpg);
+    background-image: url(Azul\ com\ Árvores\ Ilustradas\ Inverno\ Papel\ de\ Parede.png);
     background-size: cover;
     }
     
