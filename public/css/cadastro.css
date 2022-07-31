@@ -295,6 +295,7 @@ button{
      #6fba82);
 cursor: pointer;
 line-height: 12px;
+margin: 15px;
 }
 button::before{
     content: '';
@@ -306,7 +307,7 @@ button::before{
     top: 15%;
     left: 10%;
     filter: blur(15px);
-    opacity: 0;
+   
     background: linear-gradient(60deg,
      #f79544,
      #f37055,

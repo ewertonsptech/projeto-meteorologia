@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estações do Ano</title>
     <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/img.css/Weather LOVER3.png">
 </head>
 <body>
     
@@ -19,7 +20,7 @@
                     <span class="line line3"></span>
                 </div>
                 <div class="name">
-                    <h1><img src="css/img.css/Weather LOVER.png" width="54px"></h1>
+                    <h1><img src="css/img.css/Weather LOVER3.png" width="54px"></h1>
                 </div>
                 <div class="menu-items">
                     <li><a href="index.html">Inicio</a></li>
@@ -50,26 +51,26 @@
                     
                    
                    
-                  <h3> Qual o Mês :</h3><select>
-                    <option value="">Janeiro</option>
-                    <option value="">Fevereiro</option>
-                    <option value="">Março</option>
-                    <option value="">Abril</option>
-                    <option value="">Maio</option>
-                    <option value="">Junho</option>
-                    <option value="">Julho</option>
-                    <option value="">Agosto</option>
-                    <option value="">Setembro</option>
-                    <option value="">Outubro</option>
-                    <option value="">Novembro</option>
-                    <option value="">Dezembro</option>
+                  <h3> Qual o Mês :</h3><select id="select_meses">
+                    <option value="1">Janeiro</option>
+                    <option value="2">Fevereiro</option>
+                    <option value="3">Março</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
                    </select>
                     </div>
                     <div>
                   <br> 
-                  <h3> Em que hemisfério estamos: </h3><select id="">
-                     <option value="">Hemisfério Norte</option>
-                     <option value="">Hemisfério Sul</option>
+                  <h3> Em que hemisfério estamos: </h3><select id="select_hemisferio">
+                     <option value="13">Hemisfério Norte</option>
+                     <option value="14">Hemisfério Sul</option>
                     </select>
                     
                     </div>
@@ -99,16 +100,42 @@
              
             </div>
         </div>
+     
+       
 
 </body>
 </html>
 <script>
 
-estacao_ano = []
-
 function estacao(){
 
+    let mes_ano = select_meses.value
+    let posicao_geografica = select_hemisferio.value
 
+    if(mes_ano < 3 && posicao_geografica == 13){
+        resultado.innerHTML = '<img src="css/img.css/estacao/índice.jpg" width="250px">'
+    }
+    else if(mes_ano < 3 && posicao_geografica == 14){
+        resultado.innerHTML = '<img src="css/img.css/estacao/verao.jpg"  width="250px">'
+    }
+    else if (mes_ano <6 && posicao_geografica == 13){
+        resultado.innerHTML = ' <img src="css/img.css/estacao/primavera.jpg" width="250px">'
+    }
+    else if(mes_ano <6 && posicao_geografica == 14){
+        resultado.innerHTML = '<img src="css/img.css/estacao/outono.webp" width="250px">'
+    }
+    else if(mes_ano <9 && posicao_geografica == 13){
+        resultado.innerHTML = '<img src="css/img.css/estacao/verao.jpg"  width="250px">'
+    }
+    else if(mes_ano <9 && posicao_geografica == 14){
+        resultado.innerHTML = '<img src="css/img.css/estacao/índice.jpg" width="250px">'
+    }
+    else if(mes_ano < 12 && posicao_geografica == 13){
+        resultado.innerHTML = '<img src="css/img.css/estacao/outono.webp" width="250px">'
+    }
+    else {
+        resultado.innerHTML = '<img src="css/img.css/estacao/primavera.jpg"  width="250px">'
+    }
 
 }
 
