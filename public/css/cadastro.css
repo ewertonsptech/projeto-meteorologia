@@ -171,11 +171,11 @@ input:focus, textarea:focus {
 }
 
 input:invalid, textarea:invalid {
-    border-color: red;
+    border-color:#FF0000;
 }
 
 input:valid, textarea:valid {
-    border-color: green;
+    border-color:#00FF7F;
 }
 
 .card-login form input{
@@ -249,14 +249,14 @@ span{
 
 .form-control{
   
-
-   width: 283px;
+    padding: 5px;
+   width: 287px;
    background: #F0F8FF;
     border-radius: 40px;
-    padding: 10px;
+   
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 50 ;
     height: 650px;
   
   
