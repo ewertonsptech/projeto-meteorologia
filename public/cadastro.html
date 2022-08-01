@@ -48,13 +48,13 @@
 
 
                 
-                    <img src="css/img.css/índice.png" width="35px">
+                    <img src="css/img.css/índice.png" width="25px">
 
                     
 
 
                     <div class="input">
-                        <input id="input_nome" placeholder="Digite Seu Nome" type="text" required min="2" max="90">
+                      <h5>Digite Seu Nome:</h5>  <input id="input_nome" placeholder="Digite Seu Nome" type="text" required min="2" max="90">
 
                         <div class="div1">
                             <span id="span_nome" class="span_nome"></span>
@@ -64,11 +64,13 @@
 
 
                     
-                         <img src="css/img.css/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png" width="35px"><br>
+                         <img src="css/img.css/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png" width="25px">
 
 
-                            <input id="input_email" placeholder="Digite Seu Email" type="email" required="@" min="0"
+                         <h5>Informe um e-mail Válido:</h5>  <input id="input_email" placeholder="Digite Seu Email" type="email" required="@" min="0"
                                 max="50">
+                               
+
                             <div class="div4">
                                 <span id="span_email" class="span_email"></span>
                             </div>
@@ -77,10 +79,11 @@
                     
                            
 
-                          <img src="css/img.css/lock1.gif" width="35px"><br>
+                          <img src="css/img.css/lock1.gif" width="25px">
 
-                            <input id="input_senha" placeholder="Digite Sua Senha" required min="0" max="10"
+                          <h5>  Crie uma Senha:</h5>   <input id="input_senha" placeholder="Digite Sua Senha" required min="0" max="10"
                                 type="password">
+                                <h6>Mínimo 8 Caracteres</h6>
 
                                 <span id="span_senha" class="span_senha"></span>
                            
@@ -88,8 +91,16 @@
 
 
                         
-<br>
-<img src="css/img.css/1603404916_10519.gif" alt="" width="50px"><br>
+
+<img src="css/img.css/lock1.gif" width="25px">
+<h5>Confirme Sua Senha:</h5>
+<input id="input_senha" placeholder="Confirme Sua Senha" required min="0" max="10"
+    type="password">
+    <h6>Repita Sua Senha</h6>
+
+    <span id="span_senha" class="span_senha"></span>
+    
+<img src="css/img.css/1603404916_10519.gif" alt="" width="50px">
                        <h4>Qual Sua Estação Favorita:</h4> <select id="select_personagem" required>
 
                             <option value="1">Verão</option>
@@ -98,7 +109,7 @@
                             <option value="4">Primavera</option>
                         
                         </select>
-                        <br>
+                        
                         <center>
                         <button onclick="cadastrar()">
                             Cadastrar
@@ -115,6 +126,13 @@
 </body>
 </html>
 <script>
+    function cadastrar(){
+ 
+        let nome_usuario = input_nome.value
+        let email_usuario =  input_email.value
+        let senha_usuario = input_senha.value
+
+    }
     var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
     var sparkles=100;// increase of decrease for number of sparkles falling
     var x=ox=400;
@@ -131,7 +149,7 @@
     var tinyy=new Array();
     var tinyv=new Array();
     
-    colours=new Array('#ff0000','#00ff00','#ffffff','#ff00ff','#ffa500','#ffff00','#00ff00','#ffffff','ff00ff')
+    colours=new Array('#ff0000','#00ff00','#ffffff','#ff00ff','#ffa500','#ffff00','#00ff00','#ffffff','ff00ff' , '#000000' , ' 	#6A5ACD' , '#191970' , '#00BFFF' , '#4682B4'  , '#00FFFF' , '#7FFFD4' , '#00FF7F' , '#00FA9A' , '#98FB98' , '#3CB371' , '#006400')
     
     n = 10;
     y = 0;
