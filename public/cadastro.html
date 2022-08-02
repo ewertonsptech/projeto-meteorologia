@@ -34,7 +34,6 @@
             </div>
         </div>
         </nav>
-      
     <div class="banner">
         <div class="container">
         
@@ -131,7 +130,21 @@
         let nome_usuario = input_nome.value
         let email_usuario =  input_email.value
         let senha_usuario = input_senha.value
+        let tentativa_erro = 0
 
+
+        while(tentativa_erro < 3){
+        if(nome_usuario.length <3){
+            span_nome.innerHTML = "Nome Inválido Tente Novamente"
+        }
+        else if(senha_usuario.length < 8){
+            span_senha.innerHTML = "Senha muito curta tente novamente"
+        }
+        else if(tentativa_erro > 3){
+            alert("Você ultrapassou o limite de tentativas")
+        }
+        tentativa_erro++
+ }
     }
     var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
     var sparkles=100;// increase of decrease for number of sparkles falling

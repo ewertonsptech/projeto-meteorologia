@@ -6,11 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Weather Lover</title>
     <link rel="icon" href="css/img.css/Weather LOVER3.png">
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <script src="https://kit.fontawesome.com/3f0399636b.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </head>
 <body>
+    <div class="navbar">
+        <div class="container">
+            <center>
+<label class="toggle">
+    <input type="checkbox" onclick="toggleDarkLight()">
+    <span class="slider round"></span>
+  </label>
+</center>
+  <script>
+    function toggleDarkLight(){
+        var elemet = document.body;
+        elemet.classList.toggle("dark-mode")
+    }
+  </script> 
+        </div>
+    </div>
 <aside>
     <p>Menu</p>
     <a href="javascript:void(0)">
@@ -34,10 +50,12 @@
 <div class="social">
     <a href="https://www.instagram.com/ewerton.lima.dev/" target="_blank">
     <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-linkedin"></i>
 </a>
 </div>
 
-</aside>   
+</aside>  
+
 </body>
 </html>
 <script>
