@@ -1,6 +1,4 @@
-body{
-    cursor: url(https://www.cursor.cc/cursor3d/84280.png), auto;
-}
+
 aside{
     color: #fff;
     width: 250px;
@@ -66,8 +64,8 @@ body{
     height: 0;
 }
 .social i::before{
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     font-size: 14px;
     position: fixed;
     color: #fff;
