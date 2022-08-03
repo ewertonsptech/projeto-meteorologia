@@ -1,6 +1,4 @@
 
-
-
 aside{
     color: #fff;
     width: 250px;
@@ -132,4 +130,10 @@ input:checked * .slider::before{
     background-color: black;
     -webkit-transition: .4s;
     transition: .4s;
+}
+.container{
+    background-color:#44a7fd;
+    width: 1347px;
+    color: #fff;
+    background-image: linear-gradient(30deg , #44a7fd ,  #0048bd);
 }
