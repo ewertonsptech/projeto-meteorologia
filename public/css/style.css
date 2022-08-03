@@ -30,7 +30,7 @@ body{
 }
 .navbar .nav-container a{
     text-decoration: none;
-    color: #0e2431;
+    color:	#1E90FF;
     font-weight: 500;
     font-size: 1.2rem;
     padding: 0.7rem;
@@ -70,7 +70,7 @@ body{
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: #0e2431;
+    background:#000000;
 }
 .nav-container .hamburguer-lines .line1{
     transform: 0% 0%;

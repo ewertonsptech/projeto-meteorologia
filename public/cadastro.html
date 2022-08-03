@@ -8,7 +8,7 @@
     <link rel="icon" href="../public/css/img.css/Weather LOVER3.png">
     <link rel="stylesheet" href="../public/css/cadastro.css">
     <script src="https://kit.fontawesome.com/3f0399636b.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+   
 </head>
 <body>
     
@@ -53,10 +53,10 @@
 
 
                     <div class="input">
-                      <h5>Digite Seu Nome:</h5>  <input id="input_nome" placeholder="Digite Seu Nome" type="text" required min="2" max="90">
+                      <h5>Digite seu nome:</h5>  <input id="input_nome" placeholder="Digite Seu Nome" type="text" required min="2" max="90">
 
                         <div class="div1">
-                            <span id="span_nome" class="span_nome"></span>
+                            <span id="span_nome" class="span_erro"></span>
                         </div>
 
 
@@ -66,12 +66,12 @@
                          <img src="css/img.css/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png" width="25px">
 
 
-                         <h5>Informe um e-mail Válido:</h5>  <input id="input_email" placeholder="Digite Seu Email" type="email" required="@" min="0"
+                         <h5>Informe um e-mail válido:</h5>  <input id="input_email" placeholder="Digite Seu Email" type="email" required="@" min="0"
                                 max="50">
                                
 
                             <div class="div4">
-                                <span id="span_email" class="span_email"></span>
+                                <span id="span_email" class="span_erro"></span>
                             </div>
                         
 
@@ -80,11 +80,11 @@
 
                           <img src="css/img.css/lock1.gif" width="25px">
 
-                          <h5>  Crie uma Senha:</h5>   <input id="input_senha" placeholder="Digite Sua Senha" required min="0" max="10"
+                          <h5>  Crie uma senha:</h5>   <input id="input_senha" placeholder="Digite Sua Senha" required min="0" max="10"
                                 type="password">
                                 <h6>Mínimo 8 Caracteres</h6>
 
-                                <span id="span_senha" class="span_senha"></span>
+                                <span id="span_senha" class="span_erro"></span>
                            
                         
 
@@ -92,12 +92,12 @@
                         
 
 <img src="css/img.css/lock1.gif" width="25px">
-<h5>Confirme Sua Senha:</h5>
-<input id="input_senha" placeholder="Confirme Sua Senha" required min="0" max="10"
-    type="password">
+<h5>Confirme sua senha:</h5>
+<input id="input_senha_repitida" placeholder="Confirme Sua Senha" required min="0" max="10"
+    type="password" class="span_erro" >
     <h6>Repita Sua Senha</h6>
 
-    <span id="span_senha" class="span_senha"></span>
+    <span id="span_senha_errad" class="span_senha"></span>
     
 <img src="css/img.css/1603404916_10519.gif" alt="" width="50px">
                        <h5>Qual Sua Estação Favorita:</h5> <select id="select_personagem" required>
@@ -130,22 +130,32 @@
         let nome_usuario = input_nome.value
         let email_usuario =  input_email.value
         let senha_usuario = input_senha.value
-        let tentativa_erro = 0
+        let senha_igual = input_senha_repitida.value
+        
 
 
-        while(tentativa_erro < 3){
+       
         if(nome_usuario.length <3){
             span_nome.innerHTML = "Nome Inválido Tente Novamente"
         }
+        else if( email_usuario ="" || email_usuario.indexOf('@')==-1 || email_usuario.indexOf('.')==-1 ){
+            span_email.innerHTML = "Preencha campo E-MAIL corretamente!"
+             alert( "Preencha campo E-MAIL corretamente!" );
+             email_usuario.focus();
+            return false;
+    }
+        
         else if(senha_usuario.length < 8){
             span_senha.innerHTML = "Senha muito curta tente novamente"
+           alert("Senha muito curta tente novamente")
+           senha_usuario.focus();
+           return false;
         }
-        else if(tentativa_erro > 3){
-            alert("Você ultrapassou o limite de tentativas")
-        }
-        tentativa_erro++
- }
+        else if(senha_igual != senha_usuario){
+            span_senha_errad.innerHTML = "Senha diferentes Tente novamente"
+ 
     }
+     }
     var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
     var sparkles=100;// increase of decrease for number of sparkles falling
     var x=ox=400;
