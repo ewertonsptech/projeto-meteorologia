@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    cursor: url(https://www.cursor.cc/cursor3d/84280.png), auto;
-}
 .container{
     max-width: 1050px;
     width: 90%;
@@ -15,6 +12,9 @@ body{
     width: 100%;
     box-shadow: 0 1px 4px rgb(146 161 176/15%);
     position: fixed;
+}
+h1{
+    float: right;
 }
 .nav-container{
     display: flex;
