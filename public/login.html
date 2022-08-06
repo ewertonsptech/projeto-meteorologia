@@ -8,6 +8,7 @@
     <link rel="icon" href="css/img.css/Weather LOVER3.png">
     <link rel="stylesheet" href="css/login.css">
     <script type="text/javascript" src="https://cdn3.professor-falken.com/recursos/js/snowstorm.js"></script>
+    <script src="https://kit.fontawesome.com/3f0399636b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -46,42 +47,74 @@
     <br>
     
                         <h4>Digite Seu Email: </h4><br>
-                             <img src="css/img.css/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png" width="35px"><br>
+                        <i class="fa-solid fa-at"></i><br>
     
     
                                 <input id="input_email" placeholder="Digite Seu Email" type="email" required="@" min="0"
                                     max="50">
                                 <div class="div4">
-                                    <span id="span_email" class="span_email"></span>
+                                    <span id="span_email" class="span_erro"></span>
                                 </div>
                             
     
                         
                     <br>           
     <h4>Digite Sua Senha:</h4>
-                              <img src="css/img.css/lock1.gif" width="35px"><br>
+    <i class="fa-solid fa-lock"></i><br>
     
                                 <input id="input_senha" placeholder="Digite Sua Senha" required min="0" max="10"
                                     type="password">
     
-                                    <span id="span_senha" class="span_senha"></span>
+                                    <span id="span_senha" class="span_erro"></span>
                                
                             <br>
                             <center>
-                                    <button>
+                                    <button onclick="login()">
                                         Entrar
                                     </button>
-                                </center>
+                                </center><br>
+                                
     
     
+                                
                         </div>
     
     
             </div>
         </div>
+    </div>
+    
+</div>
+
 </body>
 </html>
 <script>
+    function login(){
+
+        var email = input_email.value
+        var senha = input_senha.value
+
+          if( email ="" || email.indexOf('@')==-1 || email.indexOf('.')==-1 ){
+            span_email.innerHTML = "Preencha campo E-MAIL corretamente!"
+             alert( "Preencha campo E-MAIL corretamente!" );
+             email.focus();
+            return false;
+    }
+       else if(senha.length < 8){
+        span_senha.innerHTML = "Senha/Email incorreto tente novamente"
+       }
+       else{
+    
+    if(email = senha){
+        alert("Login Realizado com Sucesso... Redirecionado a Página de Dashboard")
+       }
+        }
+
+    }
+
+
+
+
     var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
     var sparkles=100;// increase of decrease for number of sparkles falling
     var x=ox=400;

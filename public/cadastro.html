@@ -48,7 +48,7 @@
 
 
                 
-                    <img src="gerador-nomes-de-usuario.png" width="25px">
+                    <i class="fa-solid fa-user"></i>
 
                     
 
@@ -64,7 +64,7 @@
 
 
                     
-                         <img src="css/img.css/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png" width="25px">
+                        <i class="fa-solid fa-at"></i>
 
 
                          <h5>Informe um e-mail válido:</h5>  <input id="input_email" placeholder="Digite Seu Email" type="email" required="@" min="0"
@@ -79,7 +79,7 @@
                     
                            
 
-                          <img src="css/img.css/lock1.gif" width="25px">
+                            <i class="fa-solid fa-lock"></i>
 
                           <h5>  Crie uma senha:</h5>   <input id="input_senha" placeholder="Digite Sua Senha" required min="0" max="10"
                                 type="password">
@@ -92,7 +92,7 @@
 
                         
 
-<img src="css/img.css/lock1.gif" width="25px">
+                                <i class="fa-solid fa-lock"></i>
 <h5>Confirme sua senha:</h5>
 <input id="input_senha_repitida" placeholder="Confirme Sua Senha" required min="0" max="10"
     type="password" class="span_erro" >
@@ -126,18 +126,21 @@
 </body>
 </html>
 <script>
-    function cadastrar(){
+   
  
+    
+    function cadastrar(){
+        
         let nome_usuario = input_nome.value
         let email_usuario =  input_email.value
         let senha_usuario = input_senha.value
         let senha_igual = input_senha_repitida.value
-        
-
-
        
         if(nome_usuario.length <3){
             span_nome.innerHTML = "Nome Inválido Tente Novamente"
+        }
+        else if(nome_usuario.length >=3){
+            span_nome.innerHTML= '<span style="color: green;">Nome Válido</span>'
         }
         else if( email_usuario ="" || email_usuario.indexOf('@')==-1 || email_usuario.indexOf('.')==-1 ){
             span_email.innerHTML = "Preencha campo E-MAIL corretamente!"
@@ -152,10 +155,18 @@
            senha_usuario.focus();
            return false;
         }
+        else if(senha_usuario.length > 8){
+            span_senha.innerHTML = '<span style="color: green;">Senha Válida</span>'
+        }
         else if(senha_igual != senha_usuario){
             span_senha_errad.innerHTML = "Senha diferentes Tente novamente"
  
     }
+   else if (email_usuario = senha_usuario) {
+    alert("Cadastro Realizado com Sucesso")
+    } else {
+    alert("Erro ao realizar o login tente novamente")
+}
      }
     var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
     var sparkles=100;// increase of decrease for number of sparkles falling

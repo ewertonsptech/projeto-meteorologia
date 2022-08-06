@@ -257,7 +257,7 @@ span{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    height: 450px;
+    height: 380px;
   
   
 }
@@ -348,6 +348,7 @@ button::after{
     left: 5%;
     background-color: rgb(19, 20, 22);
 }
-body{
-    cursor: url(https://www.cursor.cc/cursor3d/84280.png), auto;
+.span_erro{
+    color: #FF0000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
